@@ -1,0 +1,635 @@
+{
+  "project": {
+    "name": "机场手记",
+    "updated_on": "2026-10-23",
+    "description": "查机场、对照套餐、找到原始资料。汇总公开报价、产品说明、厂商公告和用户反馈。"
+  },
+  "providers": [
+    {
+      "id": "xueshan",
+      "name": "雪山 Link",
+      "categories": [
+        "月付",
+        "按量",
+        "直连线索",
+        "自有客户端线索"
+      ],
+      "official_url": "https://www.xueshan.shop/",
+      "referral_url": "https://www.xueshan.shop/#/register?code=5Rl9uaQh",
+      "referral_confirmed": true,
+      "status": "documented",
+      "summary": "可从月付和按量套餐线索开始了解。品牌公告将线路描述为公网直连，并说明过部分区域的网络波动。",
+      "facts": [
+        {
+          "text": "维护者提供的邀请后台截图显示佣金比例为 40%；截图拍摄日期未知，当前比例、计佣基数、结算周期和提现条件尚未复核。",
+          "source": "xueshan-invite-screenshot"
+        },
+        {
+          "text": "公告将线路定位为公网直连，说明地区和速度可能随网络环境变化；不能据此承诺专线表现。",
+          "source": "xueshan-announcements"
+        },
+        {
+          "text": "公告曾说明部分地区移动网络在下午或晚高峰可能卡顿、超时；原因解释属于厂商说法，当前影响需另查。",
+          "source": "xueshan-announcements"
+        },
+        {
+          "text": "公告介绍 Android、Windows、macOS 客户端；这里只提供信息索引，未安装或验证客户端。",
+          "source": "xueshan-announcements"
+        }
+      ],
+      "unknowns": [
+        "当前结算页价格、流量倍率、重置及退款条件",
+        "你的地区和运营商下的实际表现",
+        "首购/续费计佣、退款扣回、提现门槛及实际到账"
+      ],
+      "sources": [
+        {
+          "id": "xueshan-invite-screenshot",
+          "label": "维护者提供的雪山邀请后台截图",
+          "kind": "screenshot",
+          "observed_on": null,
+          "recorded_on": "2026-10-20",
+          "url": null,
+          "note": "原图含账户界面，未公开；此处是截图文字记录，不是独立验证。"
+        },
+        {
+          "id": "xueshan-referral-owner",
+          "label": "维护者提供的雪山注册链接",
+          "kind": "owner",
+          "observed_on": null,
+          "recorded_on": "2026-10-20",
+          "url": "https://www.xueshan.shop/#/register?code=5Rl9uaQh",
+          "note": "仅确认与维护者提供的链接一致；未验证注册、订单归因或返佣到账。"
+        },
+        {
+          "id": "xueshan-announcements",
+          "label": "雪山 Link 品牌公告频道",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://t.me/s/xueshan0002",
+          "note": "读取公开频道及与用户提供站点相符的入口信息；公告事件的完整日期未在本次资料中逐条核对，历史事件不代表当日故障。"
+        },
+        {
+          "id": "xueshan-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "月付报价线索",
+          "total_cny": 9.9,
+          "billing": "monthly",
+          "quota_gb": 500,
+          "quota_period": "unknown",
+          "source": "xueshan-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方目录默认月付报价；当前售价及流量重置方式未由结算页核实。"
+        },
+        {
+          "label": "按量报价线索",
+          "total_cny": 39.9,
+          "billing": "one_time",
+          "quota_gb": 1500,
+          "quota_period": "total",
+          "source": "xueshan-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方描述为不限时流量包；是否存在其他到期、倍率或使用限制仍需核对条款。"
+        }
+      ]
+    },
+    {
+      "id": "sufe",
+      "name": "苏菲家宽",
+      "categories": [
+        "住宅代理线索",
+        "自有客户端线索"
+      ],
+      "official_url": "https://sufe.us/",
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "documented",
+      "summary": "面向住宅代理需求的资料入口，覆盖说明和客户端信息可公开读取；这次套餐页未返回完整报价。",
+      "facts": [
+        {
+          "text": "截图展示了短链、注册页、套餐页三种邀请入口，并标注好友首单 8.8 折及邀请关系保留 30 天；当前活动条件和实际归因尚未复核。",
+          "source": "sufe-invite-screenshot"
+        },
+        {
+          "text": "官网自述提供多个地区的住宅代理，并列出 Windows、macOS、iOS、Android 和 Linux 客户端入口。",
+          "source": "sufe-home"
+        },
+        {
+          "text": "品牌历史公告提到过线路调整和订阅地址恢复；购买前可查看公告中的最新变化。",
+          "source": "sufe-channel"
+        },
+        {
+          "text": "公开首页首单优惠文案与维护者截图的 8.8 折不同，适用资格与当前结算结果尚未确认，不合并成统一优惠。",
+          "source": "sufe-home"
+        }
+      ],
+      "unknowns": [
+        "当前套餐的价格、配额、倍率与使用限制",
+        "住宅 IP 和服务可用性在实际任务中的表现",
+        "邀请链接归属、优惠适用条件、佣金与提现规则"
+      ],
+      "sources": [
+        {
+          "id": "sufe-invite-screenshot",
+          "label": "维护者提供的苏菲家宽邀请页截图",
+          "kind": "screenshot",
+          "observed_on": null,
+          "recorded_on": "2026-10-20",
+          "url": null,
+          "note": "官网域名来自截图中的注册链接；原图未公开，文案不作为实测结论。"
+        },
+        {
+          "id": "sufe-home",
+          "label": "苏菲家宽产品首页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://sufe.us/",
+          "note": "读取产品正文；页面的流媒体、性能和隐私承诺均为商家自述，未作独立测试。"
+        },
+        {
+          "id": "sufe-mirrors",
+          "label": "苏菲入口公示页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://sufe.uk/info.php_",
+          "note": "公示页列出 sufe.us 和 ai.sufe.pro，并提供品牌频道入口；域名访问条件可能变化。"
+        },
+        {
+          "id": "sufe-plans",
+          "label": "苏菲套餐页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://sufe.us/plans",
+          "note": "本次仅读取到页面框架和加载提示，因此不把旧的第三方套餐价作为当前售价。"
+        },
+        {
+          "id": "sufe-channel",
+          "label": "苏菲家宽公告频道",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://t.me/s/sufepro",
+          "note": "公开历史公告，事件完整日期未逐条核对；不把历史问题写成当前服务状态。"
+        }
+      ],
+      "experiences": [],
+      "offers": []
+    },
+    {
+      "id": "bianjiecloud",
+      "name": "边界云",
+      "categories": [
+        "年付",
+        "季付",
+        "按量",
+        "自有客户端线索"
+      ],
+      "official_url": "https://www.bianjiecloud.com/",
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "documented",
+      "summary": "公开套餐页可比较年付、季付和按量流量包。注意首页展示的折算月费与实际付款总额不同。",
+      "facts": [
+        {
+          "text": "公开首页介绍跨境网络加速服务，并提供套餐、客户端下载和使用指南入口。页面上的性能宣传属于厂商自述。",
+          "source": "bianjiecloud-home"
+        },
+        {
+          "text": "套餐页显示开通后非平台原因不退款。退款执行情况和服务保障仍需阅读当前条款。",
+          "source": "bianjiecloud-plans"
+        }
+      ],
+      "unknowns": [
+        "按量包期限、各线路倍率与结算页最终条件",
+        "当前线路体验和退款执行情况",
+        "维护者自己的邀请链接及实际结算记录"
+      ],
+      "sources": [
+        {
+          "id": "bianjiecloud-home",
+          "label": "边界云公开首页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://www.bianjiecloud.com/",
+          "note": "本次读取了公开品牌页面；不表示已注册、购买、测速或验证其宣传。"
+        },
+        {
+          "id": "bianjiecloud-plans",
+          "label": "边界云套餐页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://www.bianjiecloud.com/plans",
+          "note": "记录公开页面的金额及周期，不代表完成下单或验证服务表现。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "云帆",
+          "total_cny": 189,
+          "billing": "yearly",
+          "quota_gb": 100,
+          "quota_period": "monthly",
+          "source": "bianjiecloud-plans",
+          "observed_on": "2026-10-20",
+          "note": "一次付 189 元，页面折算 15.75 元/月；每月订单日重置流量，不能按月只支付 15.75 元。"
+        },
+        {
+          "label": "星河",
+          "total_cny": 228,
+          "billing": "quarterly",
+          "quota_gb": 500,
+          "quota_period": "monthly",
+          "source": "bianjiecloud-plans",
+          "observed_on": "2026-10-20",
+          "note": "一次付 228 元，覆盖 3 个月；流量按月重置，不是三个月共享 500 GB。"
+        },
+        {
+          "label": "按量流量包",
+          "total_cny": 50,
+          "billing": "one_time",
+          "quota_gb": 50,
+          "quota_period": "total",
+          "source": "bianjiecloud-plans",
+          "observed_on": "2026-10-20",
+          "note": "公开档位为 50 元 / 50 GB，不同线路按倍率扣量；有效期限以购买页为准。"
+        }
+      ]
+    },
+    {
+      "id": "tag",
+      "name": "TAG",
+      "categories": [
+        "月付",
+        "家宽线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "来源介绍含多地区和家宽线索，最终官网仍待确认。",
+      "facts": [],
+      "unknowns": [
+        "厂商官网的可核实归属与当前入口",
+        "报价是否仍有效、配额周期、线路倍率及退款限制",
+        "服务表现和独立使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "tag-public-directory",
+          "label": "第三方目录中的 TAG 条目",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#tag",
+          "note": "仅作为发现线索。该来源含作者自己的推广链接；本项目未验证其中的评测、价格或推荐结论。"
+        },
+        {
+          "id": "tag-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "默认月付报价线索",
+          "total_cny": 114,
+          "billing": "monthly",
+          "quota_gb": 500,
+          "quota_period": "unknown",
+          "source": "tag-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方报价，当前售价和使用条件未独立确认；周期流量是否重置或是否存在倍率以厂商规则为准。"
+        }
+      ]
+    },
+    {
+      "id": "baiyueguang",
+      "name": "白月光",
+      "categories": [
+        "季付",
+        "专线线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "第三方条目提供季付报价；入口本次为访问验证页。",
+      "facts": [],
+      "unknowns": [
+        "厂商官网的可核实归属与当前入口",
+        "报价是否仍有效、配额周期、线路倍率及退款限制",
+        "服务表现和独立使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "baiyueguang-public-directory",
+          "label": "第三方目录中的白月光条目",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#白月光",
+          "note": "仅作为发现线索，来源含第三方推广链接。访问验证不代表停运，本项目不沿用其价格或质量结论。"
+        },
+        {
+          "id": "baiyueguang-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "季付报价线索",
+          "total_cny": 66,
+          "billing": "quarterly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "baiyueguang-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方报价，当前售价和使用条件未独立确认；周期流量是否重置或是否存在倍率以厂商规则为准。"
+        }
+      ]
+    },
+    {
+      "id": "shayuyun",
+      "name": "鲨鱼云",
+      "categories": [
+        "月付",
+        "家宽线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "第三方条目提供月付及家宽线索；入口本次仅有加载提示。",
+      "facts": [],
+      "unknowns": [
+        "厂商官网的可核实归属与当前入口",
+        "报价是否仍有效、配额周期、线路倍率及退款限制",
+        "服务表现和独立使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "shayuyun-public-directory",
+          "label": "第三方目录中的鲨鱼云条目",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#鲨鱼云",
+          "note": "仅作为发现线索，来源含第三方推广链接。加载提示不代表服务不可用，产品信息有待交叉核实。"
+        },
+        {
+          "id": "shayuyun-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "默认月付报价线索",
+          "total_cny": 20,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "shayuyun-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方报价，当前售价和使用条件未独立确认；周期流量是否重置或是否存在倍率以厂商规则为准。"
+        }
+      ]
+    },
+    {
+      "id": "luoyun",
+      "name": "落云",
+      "categories": [
+        "月付",
+        "地区覆盖线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "第三方条目提供月付及特殊地区覆盖线索；官网归属待进一步核对。",
+      "facts": [],
+      "unknowns": [
+        "厂商官网的可核实归属与当前入口",
+        "报价是否仍有效、配额周期、线路倍率及退款限制",
+        "服务表现和独立使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "luoyun-public-directory",
+          "label": "第三方目录中的落云条目",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#落云",
+          "note": "仅作为发现线索，来源含第三方推广链接。抓取失败不是停运判断，不采用未经核实的价格和性能描述。"
+        },
+        {
+          "id": "luoyun-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "默认月付报价线索",
+          "total_cny": 16,
+          "billing": "monthly",
+          "quota_gb": 300,
+          "quota_period": "unknown",
+          "source": "luoyun-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方报价，当前售价和使用条件未独立确认；周期流量是否重置或是否存在倍率以厂商规则为准。"
+        }
+      ]
+    },
+    {
+      "id": "feiniaoyun",
+      "name": "飞鸟云",
+      "categories": [
+        "按量",
+        "地区覆盖线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "第三方条目提供长期流量包线索；官网归属及有效期仍待核对。",
+      "facts": [],
+      "unknowns": [
+        "厂商官网的可核实归属与当前入口",
+        "报价是否仍有效、配额周期、线路倍率及退款限制",
+        "服务表现和独立使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "feiniaoyun-public-directory",
+          "label": "第三方目录中的飞鸟云条目",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#飞鸟云",
+          "note": "仅作为发现线索，来源含第三方推广链接。抓取失败不是服务质量评价，后续应核实域名归属和最新资料。"
+        },
+        {
+          "id": "feiniaoyun-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "按量报价线索",
+          "total_cny": 10,
+          "billing": "one_time",
+          "quota_gb": 200,
+          "quota_period": "total",
+          "source": "feiniaoyun-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方报价，当前售价和使用条件未独立确认；周期流量是否重置或是否存在倍率以厂商规则为准。"
+        }
+      ]
+    },
+    {
+      "id": "xship",
+      "name": "星链机场",
+      "categories": [
+        "月付",
+        "地区覆盖线索"
+      ],
+      "official_url": "https://xship.top/",
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "documented",
+      "summary": "可查看同品牌公开首页，具体套餐以结算页核对。",
+      "facts": [
+        {
+          "text": "首页提供试用订阅注册入口，具体试用配额、期限和条款仍需进入注册流程核对。",
+          "source": "xship-home"
+        }
+      ],
+      "unknowns": [
+        "当前套餐与流量规则",
+        "地区覆盖、具体限制和使用反馈"
+      ],
+      "sources": [
+        {
+          "id": "xship-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        },
+        {
+          "id": "xship-home",
+          "label": "星链机场公开首页",
+          "kind": "official",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://xship.top/",
+          "note": "已读取同品牌公开首页；与同名卫星互联网服务的关联未验证，不作关联表述。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "月付报价线索",
+          "total_cny": 12,
+          "billing": "monthly",
+          "quota_gb": 188,
+          "quota_period": "unknown",
+          "source": "xship-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方资料，尚未核对当前结算价格。流量重置和线路倍率待确认。"
+        }
+      ]
+    },
+    {
+      "id": "guodong",
+      "name": "果冻加速",
+      "categories": [
+        "月付",
+        "流量规则待核实"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "第三方提供月付和流量规则线索；本次未读取到完整套餐页。",
+      "facts": [],
+      "unknowns": [
+        "当前套餐与流量规则",
+        "地区覆盖、具体限制和使用反馈",
+        "来源入口 guodongjiasu.com 本次只有版本号，未得到完整品牌和套餐正文。"
+      ],
+      "sources": [
+        {
+          "id": "guodong-directory-reference",
+          "label": "myikuns 的公开目录（含作者推广关系）",
+          "kind": "community",
+          "observed_on": "2026-10-20",
+          "recorded_on": "2026-10-20",
+          "url": "https://github.com/myikuns/jichangtz-tuijian",
+          "note": "只摘要套餐数字与产品线索，不沿用推荐排名或实测结论；原作者未提供每条报价的更新时间，摘录日期不代表报价生效日期。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "月付报价线索",
+          "total_cny": 9.9,
+          "billing": "monthly",
+          "quota_gb": null,
+          "quota_period": "unknown",
+          "source": "guodong-directory-reference",
+          "observed_on": "2026-10-20",
+          "note": "第三方资料，尚未核对当前结算价格。来源称不限流量，公平使用、限速与其他限制待确认。"
+        }
+      ]
+    }
+  ]
+}

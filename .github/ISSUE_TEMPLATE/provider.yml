@@ -1,0 +1,30 @@
+name: 收录一家机场
+description: 提供官网或公开资料，无需先完成个人实测
+title: "[收录] 厂商名称"
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 厂商名称
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 官网、公开评测或社区讨论的原始链接
+      description: 请说明每个来源是谁提供的，不要转贴未获授权的全文和图片。
+    validations:
+      required: true
+  - type: textarea
+    id: facts
+    attributes:
+      label: 哪些信息值得收录，来源与日期是什么
+    validations:
+      required: true
+  - type: textarea
+    id: relation
+    attributes:
+      label: 你与厂商的关系
+      description: 请披露是否为厂商人员、推广者、获赠套餐用户或普通用户。
+    validations:
+      required: true

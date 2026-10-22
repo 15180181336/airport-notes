@@ -1,0 +1,11 @@
+name: 更正或失效反馈
+description: 价格、入口、条件或结论需要更新
+title: "[更正] 厂商名称 / 问题"
+body:
+  - type: textarea
+    id: correction
+    attributes:
+      label: 哪条信息需要更正
+      description: 写明旧信息、新信息、核验日期和可公开来源；不要放账户凭证。
+    validations:
+      required: true

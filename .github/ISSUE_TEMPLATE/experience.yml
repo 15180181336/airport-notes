@@ -1,0 +1,37 @@
+name: 补充使用观察
+description: 提供有日期和网络环境的真实观察
+title: "[体验] 厂商名称 / 日期 / 运营商"
+body:
+  - type: markdown
+    attributes:
+      value: "这是公开讨论。请不要提交密码、订阅地址、二维码、邮箱、支付信息或完整 IP。"
+  - type: input
+    id: provider
+    attributes:
+      label: 厂商和套餐
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: 日期、时段、时区、城市和运营商
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 做了什么，观察到什么
+      description: 请区分成功、失败、未测试，说明设备和客户端版本。
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: 问题与局限
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可公开的脱敏证据
+      description: 提交前人工检查图片与日志。
