@@ -1,8 +1,8 @@
 import copy
 import importlib.util
 import json
+import struct
 import unittest
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +18,21 @@ class DirectoryTests(unittest.TestCase):
     def test_directory_accepts_documented_without_personal_test(self):
         self.assertIs(builder.validate(self.data), self.data)
         self.assertFalse(self.data["providers"][0]["experiences"])
+
+    def test_all_providers_from_reference_index_are_in_catalog(self):
+        reference = json.loads((ROOT / "data/source-index.json").read_text(encoding="utf-8"))
+        expected = {p["id"] for p in reference["providers"]}
+        actual = {p["id"] for p in self.data["providers"]}
+        self.assertEqual(len(expected), len(reference["providers"]))
+        self.assertTrue(expected.issubset(actual), expected - actual)
+
+    def test_newly_collected_providers_cannot_use_third_party_invites(self):
+        new_ids = {"teaart", "chuixue", "gouzi", "yifen", "liangxin", "peiqian", "wula"}
+        for p in self.data["providers"]:
+            if p["id"] in new_ids:
+                self.assertIsNone(p["referral_url"])
+                self.assertFalse(p["referral_confirmed"])
+                self.assertEqual(builder.entry_link(p), "邀请链接待补")
 
     def test_referral_fragment_is_preserved_and_disclosed(self):
         p = self.data["providers"][0]
@@ -104,9 +119,15 @@ class DirectoryTests(unittest.TestCase):
         self.assertEqual(builder.md("<script>"), "&lt;script&gt;")
         self.assertIn("\\|", builder.md("a|b"))
 
-    def test_cover_is_valid_svg(self):
-        self.assertEqual(ET.parse(ROOT / "assets/cover.svg").getroot().tag,
-                         "{http://www.w3.org/2000/svg}svg")
+    def test_readme_uses_project_local_png_banner(self):
+        banner = ROOT / "assets/hero.png"
+        with banner.open("rb") as image:
+            header = image.read(24)
+        self.assertEqual(header[:8], b"\x89PNG\r\n\x1a\n")
+        width, height = struct.unpack(">II", header[16:24])
+        self.assertGreaterEqual(width, 1200)
+        self.assertGreater(width / height, 2.5)
+        self.assertIn("(assets/hero.png)", builder.readme(self.data))
 
     def test_yearly_offer_shows_full_upfront_payment(self):
         provider = next(p for p in self.data["providers"] if p["id"] == "bianjiecloud")

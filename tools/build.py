@@ -21,9 +21,9 @@ EXPERIENCE_LIST = ("observations", "pros", "cons", "limitations", "evidence")
 FIXED_FILES = (
     "CONTRIBUTING.md", ".gitignore", "docs/methodology.md", "docs/disclosure.md",
     "docs/maintaining.md", "templates/experience.json", "evidence/README.md",
-    "assets/cover.svg", ".github/ISSUE_TEMPLATE/experience.yml",
+    "assets/hero.png", ".github/ISSUE_TEMPLATE/experience.yml",
     ".github/ISSUE_TEMPLATE/correction.yml", ".github/ISSUE_TEMPLATE/provider.yml",
-    "data/catalog.json", "tools/build.py", "tests/test_build.py", "docs/choosing.md",
+    "data/catalog.json", "data/source-index.json", "tools/build.py", "tests/test_build.py", "docs/choosing.md",
 )
 
 
@@ -213,7 +213,7 @@ def readme(data):
     entries = ordered(providers)
     lines = [
         "<!-- 自动生成：python tools/build.py build -->",
-        "![机场手记：厂商目录、来源索引、使用反馈](assets/cover.svg)",
+        "![机场手记：机场黄页、套餐对照、邀请注册](assets/hero.png)",
         f"# {md(project['name'])} · 机场黄页",
         "查机场、对照套餐、找到原始资料。整理 VPN 与代理订阅服务的官网、公开报价、产品说明和使用反馈。",
         f"**整理日期：{project['updated_on']}** · {len(providers)} 家厂商 · "
@@ -255,10 +255,10 @@ def readme(data):
         lines.append(f"**{md(category)}**：{names}")
     lines += [
         "## 最近补充",
-        "- 边界云：补入官网年付、季付及按量套餐，区分一次付款额和每月流量。\n"
-        "- 雪山：补入品牌公告中的直连定位与历史波动说明。\n"
-        "- 苏菲：补入住宅代理定位和备用入口公示；套餐页价格仍待补。\n"
-        "- 第三方线索：保留来源报价和链接核查结果，方便继续了解。",
+        "- 目录补齐：新增茶艺云、吹雪云、狗子云、一分机场、良心云、赔钱机场、乌拉 VPN，"
+        "覆盖参考仓库主索引的全部 17 家厂商。[收录对照清单](data/source-index.json)\n"
+        "- 套餐资料：新增月付、长期流量包及用量限制线索，逐条保留出处和摘录日期。\n"
+        "- 邀请入口：雪山和苏菲沿用维护者的邀请链接，其他条目等待接入。",
         "## 参与维护",
         "可以提交官网入口、价格变动、公开评测或亲身体验，无需先逐家购买。"
         "资料说明谁说的、何时看到、原文在哪；不知道的内容留空。",

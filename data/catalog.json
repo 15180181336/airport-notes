@@ -630,6 +630,476 @@
           "note": "第三方资料，尚未核对当前结算价格。来源称不限流量，公平使用、限速与其他限制待确认。"
         }
       ]
+    },
+    {
+      "id": "teaart",
+      "name": "茶艺云",
+      "categories": [
+        "月付",
+        "运营商适配线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出三档月付，关注移动与联通网络的读者可继续阅读原文。",
+      "facts": [
+        {
+          "text": "原作者侧重移动与联通，电信另提及美日线路；适用性未经本项目验证。",
+          "source": "teaart-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "teaart-directory-reference",
+          "label": "myikuns 的公开目录：茶艺云",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#茶艺云",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "100 GB 档",
+          "total_cny": 18,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "teaart-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。所有档位均来自第三方目录的月付说明；流量周期、限制及现价以厂商条款为准。"
+        },
+        {
+          "label": "200 GB 档",
+          "total_cny": 30,
+          "billing": "monthly",
+          "quota_gb": 200,
+          "quota_period": "unknown",
+          "source": "teaart-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。所有档位均来自第三方目录的月付说明；流量周期、限制及现价以厂商条款为准。"
+        },
+        {
+          "label": "500 GB 档",
+          "total_cny": 50,
+          "billing": "monthly",
+          "quota_gb": 500,
+          "quota_period": "unknown",
+          "source": "teaart-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。所有档位均来自第三方目录的月付说明；流量周期、限制及现价以厂商条款为准。"
+        }
+      ]
+    },
+    {
+      "id": "chuixue",
+      "name": "吹雪云",
+      "categories": [
+        "月付",
+        "按量",
+        "运营商适配线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出月付和长期流量包，可继续核对不同运营商的适用条件。",
+      "facts": [
+        {
+          "text": "原作者提示电信与移动、联通的体验可能不同；这属于第三方观点。",
+          "source": "chuixue-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "chuixue-directory-reference",
+          "label": "myikuns 的公开目录：吹雪云",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#吹雪云",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "128 GB 档",
+          "total_cny": 2,
+          "billing": "monthly",
+          "quota_gb": 128,
+          "quota_period": "unknown",
+          "source": "chuixue-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。长期包是来源中的产品称呼，不代表服务能持续运营或任何永久保障。"
+        },
+        {
+          "label": "512 GB 档",
+          "total_cny": 4,
+          "billing": "monthly",
+          "quota_gb": 512,
+          "quota_period": "unknown",
+          "source": "chuixue-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。长期包是来源中的产品称呼，不代表服务能持续运营或任何永久保障。"
+        },
+        {
+          "label": "888 GB 长期包线索",
+          "total_cny": 18.8,
+          "billing": "one_time",
+          "quota_gb": 888,
+          "quota_period": "total",
+          "source": "chuixue-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。长期包是来源中的产品称呼，不代表服务能持续运营或任何永久保障。"
+        }
+      ]
+    },
+    {
+      "id": "gouzi",
+      "name": "狗子云",
+      "categories": [
+        "月付",
+        "按量",
+        "家宽线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出月付与长期包，并提及住宅 IP 和不同扣量倍率。",
+      "facts": [
+        {
+          "text": "来源提到部分节点采用 0.1 倍率；具体适用节点与限制需要核对。",
+          "source": "gouzi-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "gouzi-directory-reference",
+          "label": "myikuns 的公开目录：狗子云",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#狗子云",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "1000 GB 档",
+          "total_cny": 6,
+          "billing": "monthly",
+          "quota_gb": 1000,
+          "quota_period": "unknown",
+          "source": "gouzi-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 1 TB 按十进制记为 1000 GB，实际扣量单位、有效期和倍率以厂商为准。"
+        },
+        {
+          "label": "1 TB 长期包线索",
+          "total_cny": 18.8,
+          "billing": "one_time",
+          "quota_gb": 1000,
+          "quota_period": "total",
+          "source": "gouzi-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 1 TB 按十进制记为 1000 GB，实际扣量单位、有效期和倍率以厂商为准。"
+        }
+      ]
+    },
+    {
+      "id": "yifen",
+      "name": "一分机场",
+      "categories": [
+        "月付",
+        "按量",
+        "每日用量限制线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录包含月付和长期包；对日用量集中的读者，需留意单日限制。",
+      "facts": [
+        {
+          "text": "来源提示单日使用可能受套餐总额 20% 的限制，执行范围尚未核实。",
+          "source": "yifen-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "yifen-directory-reference",
+          "label": "myikuns 的公开目录：一分机场",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#一分机场",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "100 GB 档",
+          "total_cny": 2,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "yifen-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。仅整理报价数字；原目录中的限时优惠已不适合作为当前优惠承诺。"
+        },
+        {
+          "label": "1 TB 档",
+          "total_cny": 6,
+          "billing": "monthly",
+          "quota_gb": 1000,
+          "quota_period": "unknown",
+          "source": "yifen-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。仅整理报价数字；原目录中的限时优惠已不适合作为当前优惠承诺。"
+        },
+        {
+          "label": "100 GB 长期包线索",
+          "total_cny": 11.88,
+          "billing": "one_time",
+          "quota_gb": 100,
+          "quota_period": "total",
+          "source": "yifen-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。仅整理报价数字；原目录中的限时优惠已不适合作为当前优惠承诺。"
+        }
+      ]
+    },
+    {
+      "id": "liangxin",
+      "name": "良心云",
+      "categories": [
+        "月付",
+        "流量倍率线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出两档月付，另有节点倍率和地区适用说明。",
+      "facts": [
+        {
+          "text": "来源提到 0.5 倍率节点；倍率并非对全部线路的统一承诺。",
+          "source": "liangxin-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "liangxin-directory-reference",
+          "label": "myikuns 的公开目录：良心云",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#良心云",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "100 GB 档",
+          "total_cny": 2,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "liangxin-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源优惠有历史截止日期，本项目不启用这些旧优惠码。"
+        },
+        {
+          "label": "500 GB 档",
+          "total_cny": 4,
+          "billing": "monthly",
+          "quota_gb": 500,
+          "quota_period": "unknown",
+          "source": "liangxin-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源优惠有历史截止日期，本项目不启用这些旧优惠码。"
+        }
+      ]
+    },
+    {
+      "id": "peiqian",
+      "name": "赔钱机场",
+      "categories": [
+        "月付",
+        "按量",
+        "流量倍率线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出月付、长期流量包及低倍率节点的资料线索。",
+      "facts": [
+        {
+          "text": "来源提及部分下载节点使用 0.1 倍率，实际适用范围待核对。",
+          "source": "peiqian-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "peiqian-directory-reference",
+          "label": "myikuns 的公开目录：赔钱机场",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#赔钱机场",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "100 GB 档",
+          "total_cny": 1.5,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "peiqian-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 TB 按十进制换算为 GB；期限、计量方式及当前结算价仍需核对。"
+        },
+        {
+          "label": "500 GB 档",
+          "total_cny": 2.99,
+          "billing": "monthly",
+          "quota_gb": 500,
+          "quota_period": "unknown",
+          "source": "peiqian-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 TB 按十进制换算为 GB；期限、计量方式及当前结算价仍需核对。"
+        },
+        {
+          "label": "1 TB 长期包线索",
+          "total_cny": 18.9,
+          "billing": "one_time",
+          "quota_gb": 1000,
+          "quota_period": "total",
+          "source": "peiqian-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 TB 按十进制换算为 GB；期限、计量方式及当前结算价仍需核对。"
+        },
+        {
+          "label": "4 TB 长期包线索",
+          "total_cny": 68.9,
+          "billing": "one_time",
+          "quota_gb": 4000,
+          "quota_period": "total",
+          "source": "peiqian-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。来源的 TB 按十进制换算为 GB；期限、计量方式及当前结算价仍需核对。"
+        }
+      ]
+    },
+    {
+      "id": "wula",
+      "name": "乌拉VPN",
+      "categories": [
+        "月付",
+        "大流量套餐线索"
+      ],
+      "official_url": null,
+      "referral_url": null,
+      "referral_confirmed": false,
+      "status": "pending",
+      "summary": "源目录列出多个流量档位，标注为月付而非长期流量包。",
+      "facts": [
+        {
+          "text": "来源只列月付，并称个人使用不限设备；并发和共享限制尚未核对。",
+          "source": "wula-directory-reference"
+        }
+      ],
+      "unknowns": [
+        "维护者自己的完整邀请注册链接",
+        "官网归属、当前价格、流量周期与退款规则",
+        "实际使用表现，以及资料中限制的适用条件"
+      ],
+      "sources": [
+        {
+          "id": "wula-directory-reference",
+          "label": "myikuns 的公开目录：乌拉VPN",
+          "kind": "community",
+          "observed_on": "2026-10-23",
+          "recorded_on": "2026-10-23",
+          "url": "https://github.com/myikuns/jichangtz-tuijian#乌拉VPN",
+          "note": "仅概括厂商线索和套餐事实；原文含作者推广链接，不导入其邀请码、实测图片或推荐排名。原始报价生效日期未知。"
+        }
+      ],
+      "experiences": [],
+      "offers": [
+        {
+          "label": "100 GB 档",
+          "total_cny": 1,
+          "billing": "monthly",
+          "quota_gb": 100,
+          "quota_period": "unknown",
+          "source": "wula-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。1 TB、5 TB 按十进制换算；不根据宣传推断实际速度、稳定性或设备限制。"
+        },
+        {
+          "label": "1 TB 档",
+          "total_cny": 5,
+          "billing": "monthly",
+          "quota_gb": 1000,
+          "quota_period": "unknown",
+          "source": "wula-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。1 TB、5 TB 按十进制换算；不根据宣传推断实际速度、稳定性或设备限制。"
+        },
+        {
+          "label": "5 TB 档",
+          "total_cny": 20,
+          "billing": "monthly",
+          "quota_gb": 5000,
+          "quota_period": "unknown",
+          "source": "wula-directory-reference",
+          "observed_on": "2026-10-23",
+          "note": "第三方报价摘录，当前售价未独立核验。1 TB、5 TB 按十进制换算；不根据宣传推断实际速度、稳定性或设备限制。"
+        }
+      ]
     }
   ]
 }

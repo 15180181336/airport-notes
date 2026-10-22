@@ -1,0 +1,76 @@
+{
+  "source_url": "https://github.com/myikuns/jichangtz-tuijian",
+  "checked_on": "2026-10-23",
+  "scope": "三组主索引中的机场及 VPN 厂商",
+  "providers": [
+    {
+      "id": "tag",
+      "source_name": "TAG"
+    },
+    {
+      "id": "bianjiecloud",
+      "source_name": "边界云"
+    },
+    {
+      "id": "baiyueguang",
+      "source_name": "白月光"
+    },
+    {
+      "id": "sufe",
+      "source_name": "苏菲家宽"
+    },
+    {
+      "id": "shayuyun",
+      "source_name": "鲨鱼云"
+    },
+    {
+      "id": "luoyun",
+      "source_name": "落云"
+    },
+    {
+      "id": "xueshan",
+      "source_name": "雪山机场"
+    },
+    {
+      "id": "xship",
+      "source_name": "星链机场"
+    },
+    {
+      "id": "teaart",
+      "source_name": "茶艺云"
+    },
+    {
+      "id": "guodong",
+      "source_name": "果冻加速"
+    },
+    {
+      "id": "feiniaoyun",
+      "source_name": "飞鸟云"
+    },
+    {
+      "id": "chuixue",
+      "source_name": "吹雪云"
+    },
+    {
+      "id": "gouzi",
+      "source_name": "狗子云"
+    },
+    {
+      "id": "yifen",
+      "source_name": "一分机场"
+    },
+    {
+      "id": "liangxin",
+      "source_name": "良心云"
+    },
+    {
+      "id": "peiqian",
+      "source_name": "赔钱机场"
+    },
+    {
+      "id": "wula",
+      "source_name": "乌拉VPN"
+    }
+  ],
+  "note": "只记录收录范围，不沿用来源的质量排名；资料中的账号交易及其他非 VPN 广告不属于本清单。"
+}
