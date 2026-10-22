@@ -154,24 +154,32 @@ def bullets(items):
     return "\n".join(f"- {md(value)}" for value in items) or "暂无记录。"
 
 
+def invitation_available(p):
+    return p["status"] != "paused" and p["referral_confirmed"] and bool(p["referral_url"])
+
+
 def entry_link(p):
     if p["status"] == "paused":
         return "入口已暂停"
-    if p["official_url"]:
-        return link("网站入口", p["official_url"])
-    return "官网待确认"
+    if invitation_available(p):
+        return link("邀请注册", p["referral_url"])
+    return "邀请链接待补"
 
 
 def invite(p):
     if p["status"] == "paused":
         return "邀请入口已暂停。"
-    if p["referral_confirmed"] and p["referral_url"]:
+    if invitation_available(p):
         return link("邀请注册（购买后维护者可能获得佣金）", p["referral_url"])
-    return "暂无经维护者确认的邀请链接。"
+    return "邀请链接待补，暂未开放本站邀请注册入口。"
 
 
 def ordered(providers):
-    return sorted(providers, key=lambda p: ({"documented": 0, "pending": 1, "paused": 2}[p["status"]], p["id"]))
+    return sorted(providers, key=lambda p: (
+        not invitation_available(p),
+        {"documented": 0, "pending": 1, "paused": 2}[p["status"]],
+        p["id"],
+    ))
 
 
 def offer_price(offer):
@@ -209,14 +217,16 @@ def readme(data):
         f"# {md(project['name'])} · 机场黄页",
         "查机场、对照套餐、找到原始资料。整理 VPN 与代理订阅服务的官网、公开报价、产品说明和使用反馈。",
         f"**整理日期：{project['updated_on']}** · {len(providers)} 家厂商 · "
-        f"{sum(bool(p['offers']) for p in providers)} 家有参考套餐",
+        f"{sum(bool(p['offers']) for p in providers)} 家有参考套餐 · "
+        f"{sum(invitation_available(p) for p in providers)} 家已接入邀请注册",
         "[厂商速查](#厂商速查) · [参考套餐](#参考套餐) · [按需求找](#按需求找) · "
         "[怎么选](docs/choosing.md) · [补充收录](CONTRIBUTING.md)",
-        "部分链接为维护者的邀请链接，符合条件的购买可能产生佣金。"
+        "标为“邀请注册”的入口均使用本站维护者提供的邀请链接，符合条件的购买可能为维护者产生佣金。"
         "[推广关系与来源说明](docs/disclosure.md)。收录不等于质量推荐，官网宣传和第三方评价均注明出处。",
         "## 厂商速查",
-        "点击厂商名查看资料、入口、问题线索和原文。按资料状态及 ID 排列，顺序与佣金无关。",
-        "| 厂商 | 信息要点 | 可追溯资料 | 入口 |\n| --- | --- | --- | --- |",
+        "点击“邀请注册”通过本站邀请链接前往厂商注册，点击厂商名了解详细资料。"
+        "已有邀请入口的条目先展示，其余保留为资料条目，等待补充邀请链接；顺序不代表质量排名。",
+        "| 厂商 | 信息要点 | 可追溯资料 | 邀请注册 |\n| --- | --- | --- | --- |",
     ]
     for p in entries:
         categories = " / ".join(p["categories"])
@@ -226,17 +236,16 @@ def readme(data):
         "## 参考套餐",
         "以下是公开来源的报价摘录。**年付显示一次付款总额，流量重置周期另列。第三方报价尚未由本项目核对当前售价。**"
         "没有价格的厂商仍保留在黄页，付款前以结算页为准。",
-        "| 厂商 / 套餐 | 付款总额 / 周期 | 流量 | 出处与摘录日期 |\n| --- | --- | --- | --- |",
+        "| 厂商 / 套餐 | 付款总额 / 周期 | 流量 | 出处与摘录日期 | 邀请注册 |\n| --- | --- | --- | --- | --- |",
     ]
     for p in entries:
         for offer in p["offers"]:
             source = source_for(p, offer["source"])
             origin = KINDS[source["kind"]]
-            if source["url"]:
-                origin = link(origin, source["url"])
+            origin = link(origin, "reviews/" + p["id"] + ".md#原始来源")
             lines.append(f"| {link(p['name'], 'reviews/' + p['id'] + '.md')} · {md(offer['label'])} | "
                          f"{md(offer_price(offer))} | {md(offer_quota(offer))} | "
-                         f"{origin} · {offer['observed_on']} |")
+                         f"{origin} · {offer['observed_on']} | {entry_link(p)} |")
     lines += [
         "## 按需求找",
         "标签是产品信息的检索入口；家宽、专线等为相应来源的描述，实际表现请结合原文和自己的网络判断。",
@@ -268,8 +277,7 @@ def provider_page(p):
         f"# {md(p['name'])}",
         md(p["summary"]),
         f"**{STATUS[p['status']]}** · 最近整理：{freshest(p)} · {md(' / '.join(p['categories']))}",
-        "## 网站与资料",
-        entry_link(p),
+        "## 邀请注册",
         invite(p),
         "## 参考套餐",
     ]
@@ -304,6 +312,8 @@ def provider_page(p):
             "证据：" + " · ".join(link(Path(path).name, "../" + path) for path in item["evidence"]),
         ]
     lines.append("## 原始来源")
+    if p["official_url"] and not any(s["url"] == p["official_url"] for s in p["sources"]):
+        lines.append("- " + link("官网资料（核对产品信息）", p["official_url"]))
     for s in p["sources"]:
         enabled = not (s["url"] == p["referral_url"] and (p["status"] == "paused" or not p["referral_confirmed"]))
         title = link(s["label"], s["url"]) if s["url"] and enabled else md(s["label"])

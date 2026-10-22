@@ -112,8 +112,8 @@
         "自有客户端线索"
       ],
       "official_url": "https://sufe.us/",
-      "referral_url": null,
-      "referral_confirmed": false,
+      "referral_url": "https://sufe.us/register?code=UqMAwue5",
+      "referral_confirmed": true,
       "status": "documented",
       "summary": "面向住宅代理需求的资料入口，覆盖说明和客户端信息可公开读取；这次套餐页未返回完整报价。",
       "facts": [
@@ -137,7 +137,7 @@
       "unknowns": [
         "当前套餐的价格、配额、倍率与使用限制",
         "住宅 IP 和服务可用性在实际任务中的表现",
-        "邀请链接归属、优惠适用条件、佣金与提现规则"
+        "优惠适用条件、订单归因、佣金与提现规则"
       ],
       "sources": [
         {
@@ -145,9 +145,9 @@
           "label": "维护者提供的苏菲家宽邀请页截图",
           "kind": "screenshot",
           "observed_on": null,
-          "recorded_on": "2026-10-20",
-          "url": null,
-          "note": "官网域名来自截图中的注册链接；原图未公开，文案不作为实测结论。"
+          "recorded_on": "2026-10-23",
+          "url": "https://sufe.us/register?code=UqMAwue5",
+          "note": "使用维护者最初提供的邀请页截图中的注册页地址与邀请码，按维护者要求启用为邀请注册入口；未验证真实订单归因或佣金到账。"
         },
         {
           "id": "sufe-home",

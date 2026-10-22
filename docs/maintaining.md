@@ -30,7 +30,7 @@ python tools/build.py export
 1. 在 `providers` 中增加唯一 ASCII 小写 ID，填写名称、官方入口、简介与 `categories` 标签数组。标签仅作资料分类。
 2. 在 `sources` 中记录出处；`kind` 支持 `official`、`community`、`screenshot` 和 `owner`。保留来源链接、观察日期、整理日期及必要备注，未知观察日期用 `null`。
 3. 让 `facts` 的每项说明通过 `source` 引用本厂商的一条来源；把未知、冲突或过期的信息写入 `unknowns`。
-4. 邀请链接使用维护者确认的地址；尚未确认时不启用。使用体验放在可选的 `experiences` 中，没有时用空数组。
+4. 将维护者提供的完整邀请地址填入 referral_url，核对原文后设置 referral_confirmed 为 true。首页、套餐表和详情页的注册入口统一使用这个地址；无邀请链接时显示“邀请链接待补”，不回退到普通官网。此标记不表示订单归因或佣金到账已验证。使用体验放在可选的 `experiences` 中，没有时用空数组。
 5. 更新 `project.updated_on`，执行生成与检查。该日期表示内容整理日期，不等于实测或外部信息更新日期。
 
 按资料情况选择 `status`：`pending` 为待核验，`documented` 为有来源资料，`paused` 为暂停入口。状态不以体验记录数量为门槛；有来源资料不等于当前价格、稳定性或提现已获验证。暂停时保留历史资料，邀请链接不输出为可点击推广入口。

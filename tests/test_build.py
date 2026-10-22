@@ -28,7 +28,37 @@ class DirectoryTests(unittest.TestCase):
     def test_unconfirmed_referral_not_promoted(self):
         p = copy.deepcopy(self.data["providers"][1])
         p["referral_url"] = "https://example.org/register?code=unconfirmed"
+        p["referral_confirmed"] = False
         self.assertNotIn(p["referral_url"], builder.provider_page(p))
+
+    def test_primary_entry_uses_invitation_not_bare_official_url(self):
+        p = self.data["providers"][0]
+        self.assertIn(p["referral_url"], builder.entry_link(p))
+        self.assertNotEqual(builder.entry_link(p), builder.link("网站入口", p["official_url"]))
+
+    def test_missing_invitation_does_not_fall_back_to_official_url(self):
+        p = next(p for p in self.data["providers"] if p["id"] == "bianjiecloud")
+        self.assertTrue(p["official_url"])
+        self.assertEqual(builder.entry_link(p), "邀请链接待补")
+
+    def test_home_directory_and_offer_rows_preserve_invitation(self):
+        content = builder.readme(self.data)
+        provider = self.data["providers"][0]
+        rows = [row for row in content.splitlines() if row.startswith("| [雪山")]
+        self.assertEqual(len(rows), 1 + len(provider["offers"]))
+        for row in rows:
+            self.assertIn("](" + provider["referral_url"] + ")", row)
+            self.assertNotIn("](" + provider["official_url"] + ")", row)
+
+    def test_sufe_registration_uses_owner_screenshot_code(self):
+        provider = next(p for p in self.data["providers"] if p["id"] == "sufe")
+        self.assertEqual(provider["referral_url"], "https://sufe.us/register?code=UqMAwue5")
+        self.assertIn(provider["referral_url"], builder.entry_link(provider))
+
+    def test_paused_provider_has_no_primary_registration_link(self):
+        provider = copy.deepcopy(self.data["providers"][0])
+        provider["status"] = "paused"
+        self.assertEqual(builder.entry_link(provider), "入口已暂停")
 
     def test_paused_referral_not_linked(self):
         p = copy.deepcopy(self.data["providers"][0])
